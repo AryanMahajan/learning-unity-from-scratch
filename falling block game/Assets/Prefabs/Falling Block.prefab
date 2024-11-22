@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3691012488824773883}
   - component: {fileID: 7345285054271906060}
   - component: {fileID: 8826015194083150910}
-  - component: {fileID: 8059700245489064018}
   - component: {fileID: -7522109991613744060}
+  - component: {fileID: 8059700245489064018}
   m_Layer: 0
   m_Name: Falling Block
   m_TagString: Falling Block
@@ -88,18 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8059700245489064018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7701666127415899133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e83a06d0f04199f48a0110989f25394a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &-7522109991613744060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +134,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8059700245489064018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7701666127415899133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83a06d0f04199f48a0110989f25394a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedMinMax: {x: 7, y: 15}

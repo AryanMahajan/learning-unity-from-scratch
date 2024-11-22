@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public float secondsBeforeSpawn = 1;
+    public Vector2 secondsBeforeSpawnMinMax;
     float nextSpawnTime;
 
     public Vector2 spawnSizeMinMax;
@@ -22,7 +22,10 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         if(Time.time > nextSpawnTime){
-            nextSpawnTime = Time.time + secondsBeforeSpawn;
+
+            float secondsBetweenSpawns = Mathf.Lerp(secondsBeforeSpawnMinMax.y, secondsBeforeSpawnMinMax.x,Difficulty.getDifficultyPercent ());
+
+            nextSpawnTime = Time.time + secondsBetweenSpawns;
 
             float spawnSize = Random.Range(spawnSizeMinMax.x,spawnSizeMinMax.y);
             float spawnAngle = Random.Range(-spawnAngleMax,spawnAngleMax);
