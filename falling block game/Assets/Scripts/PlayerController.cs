@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-        screenHalfWidthUsingWorldUnits = Camera.main.orthographicSize * Camera.main.aspect;
+        float halfPlayerWidth = transform.localScale.x / 2f;
+        screenHalfWidthUsingWorldUnits = Camera.main.orthographicSize * Camera.main.aspect + halfPlayerWidth;
 
     }
 
@@ -30,5 +30,11 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector2(-screenHalfWidthUsingWorldUnits, transform.position.y);
         }
 
+    }
+    
+    void  OnTriggerEnter2D(Collider2D triggerCollider) {
+        if(triggerCollider.tag == "Falling Block"){
+            Destroy(gameObject);
+        }
     }
 }
